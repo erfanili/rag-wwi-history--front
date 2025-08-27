@@ -97,7 +97,7 @@ with st.container():
             unsafe_allow_html=True
         )
         # ---------- FORM ----------
-        with st.form("ask_form"):
+        with st.form("ask_form",clear_on_submit=True):
             question = st.text_input("question_input", placeholder="Your question about WWI...", label_visibility="hidden")
             # components.html(
             #     """
