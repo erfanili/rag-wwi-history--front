@@ -176,21 +176,21 @@ with st.container():
                         if confidence is not None:
                             st.write(f"**Confidence:** {confidence}")
 
-                        if sources:
-                            st.subheader("Sources")
-                            for s in sources:
-                                # handle common shapes
-                                if isinstance(s, dict):
-                                    title = s.get("title") or s.get("name") or None
-                                    url = s.get("url") or s.get("link") or None
-                                    extra = s.get("note") or s.get("snippet") or ""
-                                    if url:
-                                        st.markdown(f"- [{title or url}]({url})  \n{extra}")
-                                    else:
-                                        st.markdown(f"- {title or s}  \n{extra}")
-                                else:
-                                    # plain string
-                                    st.markdown(f"- {s}")
+                        # if sources:
+                        #     st.subheader("Sources")
+                        #     for s in sources:
+                        #         # handle common shapes
+                        #         if isinstance(s, dict):
+                        #             title = s.get("title") or s.get("name") or None
+                        #             url = s.get("url") or s.get("link") or None
+                        #             extra = s.get("note") or s.get("snippet") or ""
+                        #             if url:
+                        #                 st.markdown(f"- [{title or url}]({url})  \n{extra}")
+                        #             else:
+                        #                 st.markdown(f"- {title or s}  \n{extra}")
+                        #         else:
+                        #             # plain string
+                        #             st.markdown(f"- {s}")
 
                         # always show a small raw dump for debugging (collapsible)
                         st.expander("Backend debug (raw)").write(result)
