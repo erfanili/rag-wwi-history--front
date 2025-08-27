@@ -76,7 +76,7 @@ REQUEST_TIMEOUT = int(os.getenv("WWI_REQ_TIMEOUT", "60"))  # seconds
 with st.container():
     col1, col2, col3 = st.columns([1, 2, 1])  # Middle column gets 2x width
     with col2:
-        st.set_page_config(page_title="Ask Dan", layout="wide", page_icon="")
+        st.set_page_config(page_title="Ask Dan", layout="wide", page_icon=" ")
 
 
         st.markdown(
