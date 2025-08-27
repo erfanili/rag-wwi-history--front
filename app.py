@@ -173,8 +173,8 @@ with st.container():
                         else:
                             st.markdown(answer or "_(backend returned no 'answer' field)_", unsafe_allow_html=False)
 
-                        if confidence is not None:
-                            st.write(f"**Confidence:** {confidence}")
+                        # if confidence is not None:
+                        #     st.write(f"**Confidence:** {confidence}")
 
                         # if sources:
                         #     st.subheader("Sources")
@@ -193,7 +193,7 @@ with st.container():
                         #             st.markdown(f"- {s}")
 
                         # always show a small raw dump for debugging (collapsible)
-                        st.expander("Backend debug (raw)").write(result)
+                        # st.expander("Backend debug (raw)").write(result)
 
             # ---------- FOOTER ----------
         url = "https://www.dancarlin.com/hardcore-history-series/"
